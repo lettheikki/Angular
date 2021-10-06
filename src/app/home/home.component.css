@@ -1,0 +1,9 @@
+.price {
+    background-color: brown;
+    width: 50px;
+}
+.title {
+    font-size: 30px;
+    color: darkblue;
+    border: 2px solid darkgray;
+}
