@@ -1,4 +1,19 @@
-<div>Menu</div>
-<div>Product</div>
-<div class="price">100</div>
-<div class="title">Ese1</div>
+<div *ngFor="let ese of objektiMassiiv" class="item">
+    <div>Menu</div>
+    <div>Product</div>
+    <div class="price">{{ ese.price }}</div>
+    <div class="title">{{ ese.title }}</div>
+    <div>PILT</div>
+    <button (click)="lisaOstukorvi(ese)">Lisa ostukorvi</button>
+    <br>
+</div>
+
+<!-- <div *ngFor="let pealkiri of pealkirjad">
+    {{ pealkiri }}
+</div>
+
+<br><br> -->
+
+
+
+

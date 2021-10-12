@@ -10,6 +10,8 @@ export class CartComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log("cart componendis")
+    // ostukorvi minek pannakse k2ima kui minnakse selle component HTMLi peale
   }
 
 }

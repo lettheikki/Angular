@@ -1,1 +1,16 @@
+.navbar {
+    height: 150px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+}
 
+.logo {
+cursor: pointer;
+}
+
+.cart-button {
+cursor: pointer;
+height: 50px;
+margin: 50px;
+}
