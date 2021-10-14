@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +19,7 @@ export class HomeComponent implements OnInit {
     {price: 132, title: "ese3"}
   ]
 
-  constructor() { }
+  constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
     console.log("home componendis")
@@ -28,6 +29,7 @@ lisaOstukorvi(item: any) {
   console.log(item)
   console.log("t66tab");
   console.log(this.objektiMassiiv);
+  this.cartService.cartItemsInService.push(item)
 
   // siin lisame Service-sse kus hoitakse ostukorvi stuffi
   
