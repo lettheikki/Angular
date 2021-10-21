@@ -14,9 +14,9 @@ export class HomeComponent implements OnInit {
   // objekt = {price: 150, title: "ese1"};
 
   objektiMassiiv = [
-    {price: 300, title: "ese1"},
-    {price: 243, title: "ese2"},
-    {price: 132, title: "ese3"}
+    {hind: 300, pealkiri: "ese1"},
+    {hind: 243, pealkiri: "ese2"},
+    {hind: 132, pealkiri: "ese3"}
   ]
 
   constructor(private cartService: CartService) { }

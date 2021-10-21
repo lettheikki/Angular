@@ -1,9 +1,16 @@
+<button *ngIf="cartItems.length > 0" (click)="onEmptyCart()">Tyhjenda ostukorv</button>
+<!-- k]ikidel funktsioonidel on ymarad sulud l6pus -->
+
+<div *ngIf="cartItems.length == 0">Ostukorv on tyhi</div>
+
 <div *ngFor="let ese of cartItems" class="item">
     <div>Menu</div>
     <div>Product</div>
     <div class="price">{{ ese.price }}</div>
     <div class="title">{{ ese.title }}</div>
     <div>PILT</div>
+    <button (click)="onDeleteFromCart(ese)">X</button>
     <br>
 </div>
-
+<!-- ngIf t2histab siin, et kui midagi on ostukorvis, siis n2itab, muidu mitte -->
+<div *ngIf="cartItems.length > 0">Ostukorvi kogusumma on {{ sumOfCart }} €</div>
