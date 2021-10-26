@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../services/cart.service';
+import { ItemService } from '../services/item.service';
 
 @Component({
   selector: 'app-home',
@@ -13,16 +14,14 @@ export class HomeComponent implements OnInit {
 
   // objekt = {price: 150, title: "ese1"};
 
-  objektiMassiiv = [
-    {hind: 300, pealkiri: "ese1"},
-    {hind: 243, pealkiri: "ese2"},
-    {hind: 132, pealkiri: "ese3"}
-  ]
+  objektiMassiiv: any[] = []
 
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService,
+    private itemService: ItemService) { }
 
   ngOnInit(): void {
     console.log("home componendis")
+    this.objektiMassiiv = this.itemService.itemsInService;
   }
 
 lisaOstukorvi(item: any) {

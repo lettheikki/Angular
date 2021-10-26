@@ -2,14 +2,17 @@
 <!-- k]ikidel funktsioonidel on ymarad sulud l6pus -->
 
 <div *ngIf="cartItems.length == 0">Ostukorv on tyhi</div>
+<!-- yhe v6rdusm2rigga kontrollitakse, kahega antakse v22rtust -->
 
-<div *ngFor="let ese of cartItems" class="item">
+<!-- ngFori esimene tegu on otsida yles muutuja "of" j2rel -->
+<!-- otsitakse seda component.ts failist -->
+<div *ngFor="let cartItem of cartItems" class="item">
     <div>Menu</div>
     <div>Product</div>
-    <div class="price">{{ ese.price }}</div>
-    <div class="title">{{ ese.title }}</div>
+    <div class="price">{{ cartItem.price }}</div>
+    <div class="title">{{ cartItem.title }}</div>
     <div>PILT</div>
-    <button (click)="onDeleteFromCart(ese)">X</button>
+    <button (click)="onDeleteFromCart(cartItem)">X</button>
     <br>
 </div>
 <!-- ngIf t2histab siin, et kui midagi on ostukorvis, siis n2itab, muidu mitte -->
